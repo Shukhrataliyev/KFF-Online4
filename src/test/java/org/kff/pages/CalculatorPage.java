@@ -29,7 +29,7 @@ public class CalculatorPage {
 	public WebElement zipcodeBox;
 
 	@FindBy(css="p:contains(^Select county$)")  //xpath="//p[.='Select county']"
-	public WebElement countText; 
+	public WebElement countyText; 
 	
 	@FindBy(id="locale-inner")
 	public WebElement countyDropDown; 
