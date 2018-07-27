@@ -9,9 +9,34 @@ public class HomePage {
 	public HomePage() {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
+	
+	@FindBy(id="search-field")
+	public WebElement search;
 
-	@FindBy(xpath = "//h1[.='Web Orders']")
-	public WebElement webOrderss;
+	@FindBy(xpath="//a[.='menu']")
+	public WebElement menu;
+	
+	@FindBy(css="a[href='/statedata']")
+	public WebElement statHealthFacts;
+	
+	@FindBy(css="a[href='/statedata']")
+	public WebElement statHealthFactssub;
+	
+	@FindBy(xpath="//a")
+	public WebElement links;
+	
+	@FindBy(xpath="//h4[.='Featured State Data Resources']")
+	public WebElement featuredStateData;
+	
+	@FindBy(css="h3.kicker")
+	public WebElement newUpdatedIndicator;
+	
+	
+	
+	
+	
+	
+	
 
 	
 
