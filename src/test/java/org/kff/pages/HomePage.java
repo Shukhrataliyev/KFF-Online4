@@ -19,7 +19,7 @@ public class HomePage {
 	@FindBy(css="a[href='/statedata']")
 	public WebElement statHealthFacts;
 	
-	@FindBy(css="a[href='/statedata']")
+	@FindBy(xpath="//li[starts-with(@id,'menu-item-254')]//a[.='State Health Facts']")
 	public WebElement statHealthFactssub;
 	
 	@FindBy(xpath="//a")
