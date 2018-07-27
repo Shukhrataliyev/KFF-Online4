@@ -52,6 +52,9 @@ public class CalculatorPage {
 	@FindBy(name="employer-coverage")
 	public WebElement coverageDropDown; 
 	
+	@FindBy(name="employer-coverage")
+	public WebElement test; 
+	
 	
 	
 	
