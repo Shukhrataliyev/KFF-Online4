@@ -50,38 +50,38 @@ public abstract class TestBase {
 	public void setUp() {
 		driver = Driver.getDriver();
 		actions = new Actions(driver);
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().fullscreen();
 
 		driver.get(ConfigurationReader.getProperty("url"));
 		//sdfsdffgdfgdfg
 	}
 
-	@AfterMethod(alwaysRun = true)
-	public void tearDown(ITestResult result) throws IOException {
-		// checking if the test method failed
-		if (result.getStatus() == ITestResult.FAILURE) {
-			// get screenshot using the utility method and save the location of the screenshot
-			String screenshotLocation = BrowserUtils.getScreenshot(result.getName());
-			
-			// capture the name of test method
-			extentLogger.fail(result.getName());
-			
-			// add the screenshot to the report
-			extentLogger.addScreenCaptureFromPath(screenshotLocation);
-			
-			// capture the exception thrown
-			extentLogger.fail(result.getThrowable());
-
-		} else if (result.getStatus() == ITestResult.SKIP) {
-			extentLogger.skip("Test Case Skipped is " + result.getName());
-		}
-		Driver.closeDriver();
-	}
-
-	@AfterTest
-	public void tearDownTest() {
-		report.flush();
-	}
+//	@AfterMethod(alwaysRun = true)
+//	public void tearDown(ITestResult result) throws IOException {
+//		// checking if the test method failed
+//		if (result.getStatus() == ITestResult.FAILURE) {
+//			// get screenshot using the utility method and save the location of the screenshot
+//			String screenshotLocation = BrowserUtils.getScreenshot(result.getName());
+//			
+//			// capture the name of test method
+//			extentLogger.fail(result.getName());
+//			
+//			// add the screenshot to the report
+//			extentLogger.addScreenCaptureFromPath(screenshotLocation);
+//			
+//			// capture the exception thrown
+//			extentLogger.fail(result.getThrowable());
+//
+//		} else if (result.getStatus() == ITestResult.SKIP) {
+//			extentLogger.skip("Test Case Skipped is " + result.getName());
+//		}
+//		//Driver.closeDriver();
+//	}
+//
+//	@AfterTest
+//	public void tearDownTest() {
+//		report.flush();
+//	}
 
 }

@@ -10,11 +10,8 @@ public class StateDataPage {
 	private WebDriver driver;
 
 	public StateDataPage(WebDriver driver) {
-
 		this.driver = driver;
-
 		PageFactory.initElements(driver, this);
-
 	}
 
 	@FindBy(id = "search-field")
@@ -22,5 +19,10 @@ public class StateDataPage {
 
 	@FindBy(name = "geo-picker")
 	public WebElement selectState;
+	
+	//@FindBy(xpath = "//div[@id='state-health-wrapper']//h2")
+	@FindBy(xpath = "//h2[.='Search State Health Facts:']")
+	public WebElement SSHF;
+	
 
 }

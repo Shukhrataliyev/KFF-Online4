@@ -1,5 +1,10 @@
 package org.kff.pages;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.kff.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,7 +17,7 @@ public class CalculatorPage {
 
 	public CalculatorPage(WebDriver driver) {
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(Driver.getDriver(), this);
 	} 
 	
 	
@@ -52,8 +57,19 @@ public class CalculatorPage {
 	@FindBy(name="employer-coverage")
 	public WebElement coverageDropDown; 
 	
-	@FindBy(name="employer-coverage")
-	public WebElement test; 
+	@FindBy(xpath="(//article//a)[1]")
+	public WebElement himc; 
+	
+	@FindBy(xpath="(//p[@class = 'byline'])[1]")
+	public WebElement date; 
+
+	@FindBy(xpath="(//div[@id='subsidy-calculator-new']//strong)[1]")
+	public WebElement text; 
+
+	
+	
+
+	
 	
 	
 	
