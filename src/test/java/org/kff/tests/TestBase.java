@@ -57,7 +57,7 @@ public abstract class TestBase {
 		//sdfsdffgdfgdfg
 	}
 
-<<<<<<< HEAD
+
 	@AfterMethod(alwaysRun = true)
 	public void tearDown(ITestResult result) throws IOException {
 		// checking if the test method failed
@@ -84,7 +84,7 @@ public abstract class TestBase {
 	public void tearDownTest() {
 		report.flush();
 	}
-=======
+
 //	@AfterMethod(alwaysRun = true)
 //	public void tearDown(ITestResult result) throws IOException {
 //		// checking if the test method failed
@@ -111,6 +111,6 @@ public abstract class TestBase {
 //	public void tearDownTest() {
 //		report.flush();
 //	}
->>>>>>> 0ad2051c35b4351672e290cb56b7611440db700f
+
 
 }

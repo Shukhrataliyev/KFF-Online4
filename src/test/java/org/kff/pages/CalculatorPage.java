@@ -51,11 +51,29 @@ public class CalculatorPage {
 	@FindBy(name="income")
 	public WebElement incomeBox; 
 	
-	@FindBy(className="prompt-with-tip")
+	@FindBy(xpath="//span[.='4.']//following-sibling::p")
 	public WebElement coverageavailableText; 
 	
 	@FindBy(name="employer-coverage")
 	public WebElement coverageDropDown; 
+	
+	@FindBy(xpath="//span[.='5.']//following-sibling::p")
+	public WebElement numberOfPeopleText; 
+	
+	@FindBy(name="people")
+	public WebElement numberOfPeopleDropDown;
+	
+	@FindBy(xpath="//span[.='6.']//following-sibling::p")
+	public WebElement adultsText; 
+	
+	@FindBy(name="adult-count")
+	public WebElement adultDropDown;
+	
+	@FindBy(xpath="//span[.='7.']//following-sibling::p")
+	public WebElement childrenText; 
+	
+	@FindBy(name="child-count")
+	public WebElement childDropDown;
 	
 	@FindBy(xpath="(//article//a)[1]")
 	public WebElement himc; 

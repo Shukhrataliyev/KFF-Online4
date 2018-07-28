@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class HomePageTests extends TestBase{
 	
-	HomePage homePage = new HomePage();
+	HomePage homePage = new HomePage(driver);
 	String expectedTitle = "Kaiser Family Foundation - Health Policy Research, Analysis, Polling, Facts, Data and Journalism";
 	
 	@Test(priority = 1, groups = {"smoke"})
@@ -22,7 +22,7 @@ public class HomePageTests extends TestBase{
 		
 		homePage.menu.click();
 		homePage.statHealthFacts.click();
-		homePage.statHealthFactssub.click();
+		//homePage.statHealthFactssub.click();
 		
 	}
 	
