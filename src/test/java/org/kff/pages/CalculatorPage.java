@@ -52,6 +52,33 @@ public class CalculatorPage {
 	@FindBy(name="employer-coverage")
 	public WebElement coverageDropDown; 
 	
+	//sssss
+	@FindBy(xpath="//div[@class='form-item form-item-people clearfix']/p")
+	public WebElement familyMembers; 
+	
+	@FindBy(name="people")
+	public WebElement familyMemberDropDown; 
+	
+	@FindBy(xpath="//div[@class='form-item form-item-adults clearfix']/p")
+	public WebElement numberOfAdults; 
+	
+	@FindBy(name="adult-count")
+	public WebElement adultCount; 
+	
+	@FindBy(className="adult-info-wrapper adult-info0")
+	public WebElement adultAge; 
+	
+	@FindBy(className="adults[0][age]")
+	public WebElement age; 
+	
+	@FindBy(name="adults[0][tobacco]")
+	public WebElement usesTobaco; 
+	
+	@FindBy(xpath="//div[@class='form-item form-item-children clearfix']/p")
+	public WebElement numberOfChildren; 
+	
+	@FindBy(name="child-count")
+	public WebElement childCount; 
 	
 	
 	
