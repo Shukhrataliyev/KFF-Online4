@@ -1,12 +1,17 @@
 package org.kff.pages;
 
 import org.kff.utilities.Driver;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
-	public HomePage() {
+	
+	private WebDriver driver;
+	
+	public HomePage(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
 	
@@ -19,8 +24,8 @@ public class HomePage {
 	@FindBy(css="a[href='/statedata']")
 	public WebElement statHealthFacts;
 	
-	@FindBy(xpath="//li[starts-with(@id,'menu-item-254')]//a[.='State Health Facts']")
-	public WebElement statHealthFactssub;
+	@FindBy(xpath="//ul[@class='sub-menu']//a[@href='/statedata']")
+	public WebElement statHealthFactsSub;
 	
 	@FindBy(xpath="//a")
 	public WebElement links;
@@ -30,6 +35,9 @@ public class HomePage {
 	
 	@FindBy(css="h3.kicker")
 	public WebElement newUpdatedIndicator;
+	
+	@FindBy(id="search-submit")
+	public WebElement submitBtn;
 	
 	
 	
