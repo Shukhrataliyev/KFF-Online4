@@ -39,7 +39,7 @@ public class CalculatorPage {
 	@FindBy(id="locale-inner")
 	public WebElement countyDropDown; 
 	
-	@FindBy(css="p:contains(^Enter income as$)")  //xpath="//p[.='Enter income as']"
+	@FindBy(xpath="//p[.='Enter income as']")  //xpath="//p[.='Enter income as']"
 	public WebElement incomeText; 
 	
 	@FindBy(name="income-type")
@@ -83,6 +83,12 @@ public class CalculatorPage {
 
 	@FindBy(xpath="(//div[@id='subsidy-calculator-new']//strong)[1]")
 	public WebElement text; 
+	
+	@FindBy(css = "#subsidy-form>div>div>div")
+	public WebElement houseHoldItems;
+	
+	@FindBy(css="span[class='num']+p")
+    public List<WebElement> listCalculatorOptons;
 
 	
 	
